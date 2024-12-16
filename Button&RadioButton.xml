@@ -1,0 +1,70 @@
+1. Создание стиля для Button:
+Откройте файл res/values/styles.xml и добавьте новый стиль для элемента Button. 
+<resources>
+    <!-- Новый стиль для кнопки -->
+    <style name="CustomButtonStyle">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>
+2.Применение стиля в разметке:
+Откройте файл разметки, например activity_main.xml, и примените созданный стиль к кнопке:
+<Button
+    android:id="@+id/myButton"
+    style="@style/CustomButtonStyle"
+    android:text="Click Me"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+1.Создание стиля для RadioButton:
+Откройте файл res/values/styles.xml и добавьте стиль для элемента RadioButton:
+<resources>
+    <!-- Новый стиль для RadioButton -->
+    <style name="CustomRadioButtonStyle">
+        <item name="android:button">@drawable/custom_radio_button</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
+2.Создание кастомного drawable для кнопки RadioButton:
+Создайте новый файл в папке res/drawable под названием custom_radio_button.xml. Например:
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/holo_blue_dark" android:state_checked="true"/>
+    <item android:drawable="@android:color/darker_gray" android:state_checked="false"/>
+</selector>
+3.Применение стиля в разметке:
+Откройте файл разметки, например activity_main.xml, и примените стиль к RadioButton:
+<RadioButton
+    android:id="@+id/myRadioButton"
+    style="@style/CustomRadioButtonStyle"
+    android:text="Option 1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+1.Создание и применение темы для приложения
+Создание темы:
+Откройте файл res/values/styles.xml и создайте собственную тему для приложения. Например:
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>
+2.Применение темы в AndroidManifest.xml:
+В файле AndroidManifest.xml примените эту тему к вашему приложению:
+<application
+    android:theme="@style/AppTheme"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name">
+    <!-- Другие элементы приложения -->
+</application>
+
+
+
